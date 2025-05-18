@@ -5,7 +5,7 @@ Various aterials I created and used while TAing Intro to Game Programming (CS 10
 
 You'll find:
 
-- various practice worksheets
+- various practice worksheets (and some plans for the sessions in the weeks they go along with)
 - one presentation (I tried to use the whiteboard more heavily this semester)
 - final exam review materials:
   - my plans for the session
