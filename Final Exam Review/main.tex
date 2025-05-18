@@ -1,0 +1,143 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amssymb}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{titlesec}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{CS 104 — Review Worksheet}
+\lhead{Jackson Eshbaugh}
+\cfoot{\thepage}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{}{0pt}{}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  frame=single,
+  breaklines=true
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Final Exam Review}}\\[1ex]
+  {\large CS 104: Intro to Game Programming}\\
+  \today
+\end{center}
+
+\vspace{1em}
+
+\section{Functions}
+
+\textbf{1. Label the Function}: In the below code, label the parts of the function (fill in the blanks), using their general terms (i.e., don't add any types like \texttt{int}).
+\vspace{1em}
+\begin{lstlisting}[language=Java]
+
+_____________________  _________________(______ _______, _______ ________) {
+  
+  _____
+  
+}
+
+\end{lstlisting}
+
+\noindent\textbf{2. Practice}: Write a function \texttt{int countPositive(int[] nums)} that returns the count of elements in \texttt{nums} that are larger than 0.
+
+\vspace{15em}
+
+\pagebreak
+
+\section{Loops}
+\textbf{1. Converting Loops}: Convert the following loop to a \texttt{for} loop.
+
+\begin{lstlisting}[language=Java]
+int x = 0;
+while(x <= 3) {
+  println(x);
+  x++;
+}
+
+// The equivalent for loop:
+
+
+
+
+
+
+
+
+
+
+
+//
+\end{lstlisting}
+
+\vspace{1em}
+
+\section{Arrays}
+
+\textbf{1. Brainstorm}: Why might we use (or have we used) arrays?
+
+\vspace{5em}
+
+\noindent\textbf{2. Scenario}: Suppose you're a biology student looking to write a program to compute basic statistics for your lab.
+
+\begin{enumerate}[(a)]
+	\item Write a function that computes the variance of an array of floats, given \( x_1, x_2, \dots, x_n \) (the array of values) and \( \bar{x} \) (the mean). You need to compute:
+	\[ s^2 = \frac{\sum[(x_i - \bar{x})^2]}{n-1} \]
+	\vspace{25em}
+	\item Write another function that calculates the standard deviation, given the same as in \textit{(a)}. You are encourage to use the function you defined in \textit{(a)}. Assume the function \texttt{sqrt()} takes the square root. Your function needs to compute:
+	
+	\[ \text{standard deviation} = s = \sqrt{s^2} \]
+	\vspace{15em}
+\end{enumerate}
+
+\section{Objects}
+
+\textbf{1. Classes \& Polymorphism}: Complete the following parts.
+
+\begin{enumerate}[(a)]
+	\item Create a class \texttt{Person} to hold general information about a person. Create an instance of this class.
+	\vspace{25em}
+	\pagebreak
+	\item Create a \underline{subclass} of \texttt{Person} called \texttt{Sudent} that holds information about a student. Create a new \texttt{Person} variable and assign a new \texttt{Student} to it.
+	\vspace{30em}
+	\item Create another subclass of \texttt{Person} called \texttt{Faculty} that holds information about a faculty member. Create a \texttt{Person} array of length 3 and assign the \texttt{Person} from part \textit{(a)} to the first slot in the array and the \texttt{Student} from part \textit{(b)} to the second slot. Finally, add a new \texttt{Faculty} object to the last slot.
+\end{enumerate}
+
+\pagebreak
+
+\section{Java}
+\textbf{1. Translate}: Translate the below Processing code into proper Java code.
+
+\begin{lstlisting}[language=Java]
+void setup() {
+  println("Hello, World!");
+}
+
+// The Java code for this:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+\end{lstlisting}
+
+\end{document}

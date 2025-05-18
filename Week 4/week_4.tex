@@ -1,0 +1,152 @@
+\documentclass[11pt]{exam}
+\usepackage{listings}
+\usepackage{color}
+\newcommand{\myname}{Jackson Eshbaugh}
+\newcommand{\myemail}{eshbaugj}
+\newcommand{\myhwtype}{MSG Activity}
+\newcommand{\myhwnum}{3}
+\newcommand{\myclass}{CS 104}
+\newcommand{\mylecture}{1}
+\newcommand{\mysection}{2}
+
+% Prefix for numedquestion's
+\newcommand{\questiontype}{Exercise}
+
+% Use this if your "written" questions are all under one section
+% For example, if the homework handout has Section 5: Written Questions
+% and all questions are 5.1, 5.2, 5.3, etc. set this to 5
+% Use for 0 no prefix. Redefine as needed per-question.
+\newcommand{\writtensection}{0}
+
+\usepackage{amsmath, amsfonts, amsthm, amssymb}  % Some math symbols
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[all]{xy}
+\usepackage{wrapfig}
+\usepackage{fancyvrb}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{framed}
+\usepackage{parcolumns}
+
+\usepackage{centernot}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\card}{\vert}{\vert}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\pagestyle{empty}
+
+\def\indented#1{\list{}{}\item[]}
+\let\indented=\endlist
+
+\newcounter{questionCounter}
+\newcounter{partCounter}[questionCounter]
+
+\newenvironment{namedquestion}[1][\arabic{questionCounter}]{%
+    \addtocounter{questionCounter}{1}%
+    \setcounter{partCounter}{0}%
+    \vspace{.2in}%
+    \noindent{\bf #1}%
+    \vspace{0.3em} \hrule \vspace{.1in}%
+}{}
+
+\newenvironment{numedquestion}[0]{%
+    \stepcounter{questionCounter}%
+    \vspace{.2in}%
+    \ifx
+        \writtensection\undefined
+        \noindent{\bf \questiontype \; \arabic{questionCounter}. }%
+    \else
+        \if
+            \writtensection0
+            \noindent{\bf \questiontype \; \arabic{questionCounter}. }%
+        \else
+            \noindent{\bf \questiontype \; \writtensection.\arabic{questionCounter} }%
+        \fi
+        \vspace{0.3em} \hrule \vspace{.1in}%
+        }{}
+
+\newenvironment{alphaparts}[0]{%
+    \begin{enumerate}[label=\textbf{(\alph*)}]
+    }{\end{enumerate}}
+
+\newenvironment{arabicparts}[0]{%
+    \begin{enumerate}[label=\textbf{\arabic{questionCounter}.\arabic*})]
+    }{\end{enumerate}}
+
+\newenvironment{questionpart}[0]{%
+    \item
+    }{}
+
+\newcommand{\answerbox}[1]{
+    \begin{framed}
+    \vspace{#1}
+    \end{framed}}
+
+\pagestyle{head}
+
+\headrule
+\header{\textbf{\myclass\ \mylecture\mysection}}%
+{\textbf{\myname\ }}%
+{\textbf{\myhwtype\ \myhwnum}}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegray},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+    \thispagestyle{plain}
+    \begin{center}
+    {\Large \myclass{} \myhwtype{} \myhwnum}:
+        \\
+        {\Large Functions in Processing}
+        \\
+        \myname{}\\
+        \today
+    \end{center}
+
+    \textbf{Directions}: Implement the following, either on paper or in Processing.
+
+\begin{itemize}
+    \item Modify the house example to include windows and a door using functions.
+    \item Change the pattern example to use squares instead of circles.
+    \item Create a function that draws a stick figure and use it multiple times in different positions.
+    \item Write a function that draws a tree and use it to create a forest scene.
+    \item Implement a function that draws a sun with rays and place it in different positions on the canvas.
+    \item Develop a function that generates a random starry sky by placing small circles randomly.
+    \item Write a function that returns the area of a rectangle given its width and height.
+    \item Implement a function that takes a radius as input and returns the circumference of a circle.
+    \item Create a function that returns the distance between two points given their coordinates.
+    \item Design a function that takes an integer and returns whether it is even or odd.
+    \item Write a unit test to verify the correctness of the function that returns the area of a rectangle.
+\end{itemize}
+
+\end{document}
